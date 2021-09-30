@@ -25,7 +25,7 @@ class DogBoarder:
                     if dog.name == name and dog.breed == breed and dog.owner == owner:
                             self.dogs.remove(dog)
                             self.slots_occupied -= 1
-                            cost = self.daily_rate * days  
+                            cost = self.daily_rate * int(days)  
                             return cost
             else:
                 raise(ValueError)
@@ -42,4 +42,4 @@ class Dog(DogBoarder):
         self.breed = breed
         self.owner = owner
 
-    
+ 
